@@ -19,18 +19,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
-          <h4><i>Don't forget it!</i></h4>
-        </header>
-        <br/>
-        <Page1 />
-        <Page2 />
-        <Page3 />
-        <Page4 />
-        <Admin />
-      </div>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <h1 className="App-title">Feedback!</h1>
+            <h4><i>Don't forget it!</i></h4>
+          </header>
+          <br/>
+          <Route path="/" exact component={Page1} /> 
+          <Route path="/Page2" exact component={Page2} /> 
+          <Route path="/Page3" exact component={Page3} /> 
+          <Route path="/Page4" exact component={Page4} /> 
+          <Route path="/Admin" exact component={Admin} /> 
+        </div>
+      </Router>
     );
   }
 }

@@ -6,7 +6,10 @@ import { connect } from 'react-redux';
 class Admin extends Component {
     render() {
         return (
-            <div></div>
+            <div>
+                <p>On Admin Page dummy</p>
+
+            </div>
         )
     }
 }

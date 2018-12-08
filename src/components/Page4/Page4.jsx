@@ -6,7 +6,10 @@ import { connect } from 'react-redux';
 class Page4 extends Component {
     render() {
         return (
-            <div></div>
+            <div>
+                <p>On Page 4 dummy</p>
+
+            </div>
         )
     }
 }
