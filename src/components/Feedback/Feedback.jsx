@@ -10,11 +10,11 @@ class Feedback extends Component {
     render() {
         return (
             <div>
-                <h3>On Feedback Page dummy</h3>
-                <p>{this.props.page1}</p>
-
-
-
+                <h3>Yr stats so far dawg:</h3>
+                <p>Feelings: {this.props.reduxStore.feedbackList.page1}</p>
+                <p>Understanding: {this.props.reduxStore.feedbackList.page2}</p>
+                <p>Supported: {this.props.reduxStore.feedbackList.page3}</p>
+                <p>Comments: {this.props.reduxStore.feedbackList.page4}</p>
             </div>
         )
     }

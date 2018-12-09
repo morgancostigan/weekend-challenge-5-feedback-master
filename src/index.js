@@ -12,7 +12,7 @@ const feedbackList = (state = {
     page1: 0,
     page2: 0,
     page3: 0,
-    page4: '',
+    page4: `nothin' yet`,
     flag: false
 }, action) => {  //state assigned zero values to start
     switch (action.type) {
