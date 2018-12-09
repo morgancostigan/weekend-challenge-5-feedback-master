@@ -18,6 +18,8 @@ class App extends Component {
 
   }//end componentDidMount
 
+  sendFeedbackToDB
+
   render() {
     return (
       <Router>
