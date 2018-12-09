@@ -41,7 +41,9 @@ class Page3 extends Component {
                 <br/>
                 <input onChange={this.handleSupportChange} type="radio" id="support5" name="support" value="5"/>5 COWABUNGA DUDE!!!
                 <br/>
-                <button onClick={this.handleClick}><Link to="/page4">Safe space?</Link></button>
+                <Link to="/page2"><button>Back</button></Link>
+
+                <Link to="/page4"><button onClick={this.handleClick}>Moving on...</button></Link>
                 <br />
                 <br />
                 <br />

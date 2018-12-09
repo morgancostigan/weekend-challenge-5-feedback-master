@@ -41,7 +41,7 @@ class Page1 extends Component{
                 <br/>
                 <input onChange={this.handleFeelingsChange} type="radio" id="feeling5" name="feelings" value={5}/>5 I'm in God Mode
                 <br/>
-                <button onClick={this.handleClick}><Link to="/page2">Let's talk about feelings</Link></button>
+                <Link to="/page2"><button onClick={this.handleClick}>Moving on...</button></Link>
                 <br/>
                 <br/>
                 <br/>
