@@ -11,7 +11,7 @@ class Page4 extends Component {
 
     state = {
         page4: '',
-        flag: false
+        flag: true
     }
 
     handleCommentChange = (event) => {
@@ -24,7 +24,8 @@ class Page4 extends Component {
     handleClick = () => {
         this.props.dispatch({
             type: 'ADD_4',
-            payload: this.state.page4
+            payload: this.state
+            
         })
     }
     render() {
@@ -36,6 +37,7 @@ class Page4 extends Component {
                 <Link to="/page3"><button>Back</button></Link>
                 <Link to="/"><button onClick={this.handleClick}>The end is the beginning</button></Link>
                 <br />
+
                 <br />
                 <br />
                 <br />

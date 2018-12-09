@@ -7,6 +7,12 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 
 class Feedback extends Component {
+
+    sendFeedbackToDB = () => {
+        console.log('sending to DB', this.props.reduxStore.feedbackList);
+
+    }
+    
     render() {
         return (
             <div>
@@ -15,11 +21,14 @@ class Feedback extends Component {
                 <p>Understanding: {this.props.reduxStore.feedbackList.page2}</p>
                 <p>Supported: {this.props.reduxStore.feedbackList.page3}</p>
                 <p>Comments: {this.props.reduxStore.feedbackList.page4}</p>
-                <button>Send It</button>
+                <button onClick={this.sendFeedbackToDB}>Send It</button>
             </div>
         )
     }
 }
+
+
+
 
 const mapStateToProps = (reduxStore) => {
     return {
