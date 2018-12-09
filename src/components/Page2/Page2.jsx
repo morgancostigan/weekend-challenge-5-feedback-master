@@ -6,18 +6,40 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 
 class Page2 extends Component {
+
+    state = {
+        page2: 0
+    }
+
+    handleBrainsChange = (event) => {
+        console.log(event.target.value);
+        this.setState({
+            page2: event.target.value
+        })
+    }
+
+    handleClick = () => {
+        this.props.dispatch({
+            type: 'ADD_2',
+            payload: this.state.page2
+        })
+    }
+
     render() {
         return (
             <div>
                 <h3>Is yr brain on board?</h3>
-                {/* <input onChange={this.handleFeelingsChange} type="radio" id="feeling1" name="feelings" value="true" checked={this.state.page1 === 1} />1 - Ugh, garbage
-                <input onChange={this.handleFeelingsChange} type="radio" id="feeling2" name="feelings" value="true" checked={this.state.page2 === 2} />2 - I've been better
-                <input onChange={this.handleFeelingsChange} type="radio" id="feeling3" name="feelings" value="true" checked={this.state.page3 === 3} />3 - Pretty a'ight
-                <input onChange={this.handleFeelingsChange} type="radio" id="feeling4" name="feelings" value="true" checked={this.state.page4 === 4} />4 - Feeling gooooood man
-                <input onChange={this.handleFeelingsChange} type="radio" id="feeling5" name="feelings" value="true" checked={this.state.page5 === 5} />5 - I'm in God-Mode */}
-                <button onClick={this.handleClick}><Link to="/page3">Next</Link></button>
-
-
+                <input onChange={this.handleBrainsChange} type="radio" id="brains1" name="brains" value={1} />1 Nah brah, my brain is gobbledygook.
+                <br />
+                <input onChange={this.handleBrainsChange} type="radio" id="brains2" name="brains" value={2} />2 It's not.
+                <br />
+                <input onChange={this.handleBrainsChange} type="radio" id="brains3" name="brains" value={3} />3 I think I see a break in the haze.
+                <br />
+                <input onChange={this.handleBrainsChange} type="radio" id="brains4" name="brains" value={4} />4 Smarty-pants
+                <br />
+                <input onChange={this.handleBrainsChange} type="radio" id="brains5" name="brains" value={5} />5 Enlightened
+                <br />
+                <button onClick={this.handleClick}><Link to="/page3">Braaaainnnnnsss</Link></button>
             </div>
         )
     }
