@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../App/App';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import Feedback from '../Feedback/Feedback';
 
 
 class Page1 extends Component{
@@ -29,7 +30,7 @@ class Page1 extends Component{
     render() {
         return(
             <div>
-                <h3>How ya doin?</h3>
+                <h3>How ya doin', like, emotionally?</h3>
                 <input onChange={this.handleFeelingsChange} type="radio" id="feeling1" name="feelings" value={1}/>1 Ugh, garbage
                 <br/>
                 <input onChange={this.handleFeelingsChange} type="radio" id="feeling2" name="feelings" value={2}/>2 I've been better
@@ -41,6 +42,11 @@ class Page1 extends Component{
                 <input onChange={this.handleFeelingsChange} type="radio" id="feeling5" name="feelings" value={5}/>5 I'm in God Mode
                 <br/>
                 <button onClick={this.handleClick}><Link to="/page2">Let's talk about feelings</Link></button>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <Feedback/>
             </div>
         )
     }

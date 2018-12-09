@@ -3,6 +3,8 @@ import axios from 'axios';
 import '../App/App';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import Feedback from '../Feedback/Feedback';
+
 
 
 class Page4 extends Component {
@@ -32,6 +34,11 @@ class Page4 extends Component {
                 <input onChange={this.handleCommentChange} placeholder="Colorful Commentary" value={this.state.page4} name="comment" />
                 <br/>
                 <button onClick={this.handleClick}><Link to="/">The end is the beginning</Link></button>
+                <br />
+                <br />
+                <br />
+                <br />
+                <Feedback />
             </div>
         )
     }

@@ -3,6 +3,8 @@ import axios from 'axios';
 import '../App/App';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import Feedback from '../Feedback/Feedback';
+
 
 
 
@@ -29,17 +31,22 @@ class Page3 extends Component {
         return (
             <div>
                 <h3>Trust fall?</h3>
-                <input onChange={this.handleSupportChange} type="radio" id="support1" name="support" value="true"/>1 What, and crack my f%#!@ skull?
+                <input onChange={this.handleSupportChange} type="radio" id="support1" name="support" value="1"/>1 What, and crack my f%#!@ skull?
                 <br/>
-                <input onChange={this.handleSupportChange} type="radio" id="support2" name="support" value="true"/>2 I don't think you'd catch me.
+                <input onChange={this.handleSupportChange} type="radio" id="support2" name="support" value="2"/>2 I don't think you'd catch me.
                 <br/>
-                <input onChange={this.handleSupportChange} type="radio" id="support3" name="support" value="true"/>3 I'm on the fence.
+                <input onChange={this.handleSupportChange} type="radio" id="support3" name="support" value="3"/>3 I'm on the fence.
                 <br/>
-                <input onChange={this.handleSupportChange} type="radio" id="support4" name="support" value="true"/>4 Let's do this.
+                <input onChange={this.handleSupportChange} type="radio" id="support4" name="support" value="4"/>4 Let's do this.
                 <br/>
-                <input onChange={this.handleSupportChange} type="radio" id="support5" name="support" value="true"/>5 COWABUNGA DUDE!!!
+                <input onChange={this.handleSupportChange} type="radio" id="support5" name="support" value="5"/>5 COWABUNGA DUDE!!!
                 <br/>
                 <button onClick={this.handleClick}><Link to="/page4">Safe space?</Link></button>
+                <br />
+                <br />
+                <br />
+                <br />
+                <Feedback />
             </div>
         )
     }
