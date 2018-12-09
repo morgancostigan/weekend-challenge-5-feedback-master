@@ -8,8 +8,24 @@ import {Provider} from 'react-redux';
 import logger from 'redux-logger'; // shows more detail in console
 
 
-const feedbackList = (state = {}, action) => {  //state null for now
-    return state;
+const feedbackList = (state = {
+    page1: 0,
+    page2: 0,
+    page3: 0,
+    page4: ''
+}, action) => {  //state assigned zero values to start
+    switch (action.type) {
+        case 'ADD_1':
+            return {...state, page1: action.payload}
+        case 'ADD_2':
+            return { ...state, page1: action.payload }
+        case 'ADD_3':
+            return { ...state, page1: action.payload }
+        case 'ADD_4':
+            return { ...state, page1: action.payload }
+        default:
+            return state
+    }
 }// end feedbackList reducer
 
 
