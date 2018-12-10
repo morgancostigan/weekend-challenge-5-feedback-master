@@ -11,7 +11,7 @@ class Page4 extends Component {
 
     state = {
         page4: '',
-        flag: true
+        flag: false
     }
 
     handleCommentChange = (event) => {
@@ -28,6 +28,13 @@ class Page4 extends Component {
             
         })
     }
+
+    handleFlaggerChange = (event) => {
+        this.setState({
+            flag: event.target.value
+        })
+    }
+
     render() {
         return (
             <div>
@@ -37,7 +44,7 @@ class Page4 extends Component {
                 <Link to="/page3"><button>Back</button></Link>
                 <button onClick={this.handleClick}>Is that yr final answer?</button>
                 <br />
-
+                <input onChange={this.handleFlaggerChange} type="checkbox" name="flagger" value="true"/>You want we should come and has talk?
                 <br />
                 <br />
                 <br />
