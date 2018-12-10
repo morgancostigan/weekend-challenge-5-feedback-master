@@ -15,7 +15,7 @@ class Page4 extends Component {
     }
 
     handleCommentChange = (event) => {
-        console.log(event.target.value);
+        // console.log(event.target.value); 
         this.setState({
             page4: event.target.value
         })

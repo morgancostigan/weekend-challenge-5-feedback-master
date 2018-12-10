@@ -8,10 +8,18 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 class Feedback extends Component {
 
+
     sendFeedbackToDB = () => {
         console.log('sending to DB', this.props.reduxStore.feedbackList);
+        axios.post(`/feedback`, this.props.reduxStore.feedbackList)
+        .then(response => {
+            console.log('POST response:', response);
+        }).catch(error => {
+            console.log('POST error', error);
+            
+        })//end AXIOS POST
 
-    }
+    }//end sendFeedbackToDB
     
     render() {
         return (

@@ -13,22 +13,18 @@ router.get('/', (req, res) => {
     });
 })
 
-router.post( (req, res) => {
+router.post('/', (req, res) => {
     console.log('POST /feedback');
-/////////////////////////////////////////////////////////////////////////////////
-    // const newStudent = req.body.github_name;
-    // const sqlText = `INSERT INTO students (github_name) VALUES ($1)`;
-
-    // pool.query(sqlText, [newStudent])
-    //     .then((result) => {
-    //         res.sendStatus(201);
-    //     })
-    //     .catch((error) => {
-    //         console.log(`Error making database query ${sqlText}`, error);
-    //         res.sendStatus(500);
-    //     });
-/////////////////////////////////////////////////////////////////////////////////
-    /////////////////////
+    const feedbackData = req.body;
+    const sqlText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments", "flagged") VALUES ($1, $2, $3, $4, $5);`;
+    pool.query(sqlText, [feedbackData.page1, feedbackData.page2, feedbackData.page3, feedbackData.page4, feedbackData.flag])
+        .then((result) => {
+            res.sendStatus(201);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${sqlText}`, error);
+            res.sendStatus(500);
+        });
 })
 
 module.exports = router;
