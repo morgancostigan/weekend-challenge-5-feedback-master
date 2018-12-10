@@ -41,7 +41,7 @@ class Page2 extends Component {
                 <br />
                 <input onChange={this.handleBrainsChange} type="radio" id="brains5" name="brains" value={5} />5 Enlightened
                 <br />
-                <Link to="/page1"><button>Back</button></Link>
+                <Link to="/"><button>Back</button></Link>
                 <Link to="/page3"><button onClick={this.handleClick}>Moving on...</button></Link>
                 <br />
                 <br />

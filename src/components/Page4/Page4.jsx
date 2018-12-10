@@ -35,7 +35,7 @@ class Page4 extends Component {
                 <input onChange={this.handleCommentChange} placeholder="Colorful Commentary" value={this.state.page4} name="comment" />
                 <br/>
                 <Link to="/page3"><button>Back</button></Link>
-                <Link to="/"><button onClick={this.handleClick}>The end is the beginning</button></Link>
+                <button onClick={this.handleClick}>Is that yr final answer?</button>
                 <br />
 
                 <br />

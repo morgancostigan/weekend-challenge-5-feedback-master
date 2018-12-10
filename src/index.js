@@ -24,6 +24,14 @@ const feedbackList = (state = {
             return { ...state, page3: action.payload }
         case 'ADD_4':
             return { ...state, page4: action.payload.page4, flag: action.payload.flag }
+        case 'RESET_VALUES':
+            return { ...state, 
+                page1: action.payload.page1, 
+                page2: action.payload.page2,
+                page3: action.payload.page3,
+                page4: action.payload.page4,
+                flag: action.payload.flag
+            }    
         default:
             return state
     }

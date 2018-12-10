@@ -7,6 +7,7 @@ import Page1 from '../Page1/Page1';
 import Page2 from '../Page2/Page2';
 import Page3 from '../Page3/Page3';
 import Page4 from '../Page4/Page4';
+import Page5 from '../Page5/Page5';
 import Admin from '../Admin/Admin';
 import Feedback from '../Feedback/Feedback';
 
@@ -31,6 +32,8 @@ class App extends Component {
           <Route path="/Page2" exact component={Page2} /> 
           <Route path="/Page3" exact component={Page3} /> 
           <Route path="/Page4" exact component={Page4} /> 
+          <Route path="/Page5" exact component={Page5} /> 
+
           <Route path="/Admin" exact component={Admin} /> 
           <Route path="/Feedback" exact component={Feedback} />
         </div>
